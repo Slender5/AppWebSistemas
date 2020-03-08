@@ -25,6 +25,7 @@
 		<p></p>
 		<button>Editar</button>
 		<button>Eliminar</button>
+		<div></div>
 	</div>
 </body>
 </html>
