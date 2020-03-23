@@ -1,0 +1,236 @@
+.contenedor-cuerpo-noticia{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.contenedor-img-noticia{
+	width: 20%;
+	min-width: 200px;
+	float: left;
+    margin: 0px 20px;
+    padding: 10px;
+    border: 2px solid #8cc63e;
+}
+
+.contenedor-img-noticia img{
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*************************************************Contenedor Texto Noticias*******************************************************************************/
+
+.contenedor-texto{
+
+	width: 80%;
+	min-height: 200px;
+    float: left;
+    margin: 0px 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+	border: 2px solid #8cc63e;
+
+}
+
+.contenedor-texto p{
+	margin: 10px;
+	font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 20px;
+
+}
+
+/*************************************************Contenedor Texto Conocenos*******************************************************************************/
+
+
+.contenedor-texto-conocenos{
+	width: 100%;
+	min-height: 200px;
+    float: left;
+    margin: 0px 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+	border: 2px solid #8cc63e;
+}
+
+.contenedor-texto-conocenos p{
+	margin: 10px;
+	font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 20px;
+
+}
+
+.contenedor-texto-conocenos ul{
+	margin: 10px;
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.contenedor-texto-conocenos ul li{
+	margin-bottom: 20px;
+}
+
+/*************************************************Contenedor Reticulas**********************************************************************************/
+
+.contenedor-enlaces{
+	width: calc(100% - 40px);
+	margin: 2% auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor-enlaces a{
+
+	color: 	#1B396A;
+	padding: 2%;
+
+	
+}
+
+.contenedor-enlaces a:hover{
+
+	color: #8cc63e;
+}
+
+.contenedor-texto-conocenos-reticula{
+	width: 100%;
+	min-height: 200px;
+    float: left;
+    margin: 0px 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border: 2px solid #8cc63e;
+}
+
+.contenedor-texto-conocenos-reticula p{
+	margin: 10px;
+	font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 20px;
+
+}
+
+/*************************************************Contenedor Botones*******************************************************************************/
+
+
+.contenedor-botones{
+
+	width: 100%;
+	overflow: hidden;
+}
+
+.btn {
+	width: 150px;
+	padding: 10px;
+	margin: 20px;
+	background: #1B396A;
+	border: none;
+	outline-style: none;
+	border-radius: 5px;
+	transition: all _7s;
+	cursor: pointer;
+	float: right;
+
+}
+
+.btn span{
+	color: #fff;
+	font-size: 20px;
+	transition: .7s;
+	text-align: center;
+}
+
+.btn span::after{
+	opacity: 0;
+	content: "\00bb";
+	transition: .7s;
+}
+
+.btn:hover span::after{
+	opacity: 1;
+	margin-left: 5px;
+}
+
+.contenedor-botones-ver{
+	justify-content: center;
+  	align-items: center;
+}
+
+.centrado{
+	float: none;
+}
+
+
+/********************************************************BUSCADOR*****************************************/
+
+.contenedor-buscador-noticia{
+	width: calc(100% - 40px);
+	margin: 2% auto;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.buscador{
+	width: 35%;
+	float: right;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador form{
+	width: 100%;
+}
+
+.btn-buscar {
+	width: 15%;
+	background: #fff;
+	border: none;
+	border-radius: 6px;
+	color: #1B396A;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 10px;
+	text-align: center;
+	margin-left: 5px;
+
+}
+
+.btn-buscar span{
+	transition: .7s;
+	text-align: center;
+}
+
+.btn-buscar span::after{
+	opacity: 0;
+	content: "\00bb";
+	transition: .7s;
+}
+
+.btn-buscar:hover span::after{
+	opacity: 1;
+	margin-left: 3px;
+}
+
+.contenedor-buscador-noticia .icono {
+float: left;
+}	
+
+.contenedor-boton-cargar .icono {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #1B396A;
+	font-size: 38px;
+}
