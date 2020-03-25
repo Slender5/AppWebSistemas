@@ -5,7 +5,7 @@
 @section('content')
 
 		<!----------------------------------------------------------------- FORMULARIO - CARGAR RETICULA ---------------------------------------------------------->
-		<form class="form-group" method="POST" action="/NuevoElementoRet/{{$reticula->slug}}" enctype="multipart/form-data">
+		<form class="form-group" method="POST" action="/VerReticula/{{$reticula->slug}}" enctype="multipart/form-data">
 			@method('PUT')
 	    	@csrf
 
@@ -63,7 +63,7 @@
 						<div class="cargar-doc-pdf">
 
 							<i class="icono fas fa-file-pdf"></i>
-							<div id="info-img">{{$reticula->documento}}</div>
+							<div id="info-img">No se seleccionó archivo</div>
 							
 						</div>
 						
