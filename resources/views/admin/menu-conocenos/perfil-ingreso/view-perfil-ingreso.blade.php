@@ -10,32 +10,31 @@
 		
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Perfil De Ingreso</h3>
+			<h3>Perfil De Ingreso</h3>
 
 		</div>
-
-		@foreach ($perfilingreso as $perfilingres)
 
 		<div class="contenedor-cuerpo-noticia">
 
 			<div class="contenedor-texto-conocenos">
 
-					<ul>
+				<ul>
 
-						<li>{{$perfilingres->elemento}}</li>
+					@foreach ($perfilingreso as $perfilingres)
 
-					</ul>
+					<li>{{$perfilingres->elemento}}</li>
 
-				</div>
+					@endforeach
+
+				</ul>
+
+			</div>
 
 		</div>
 
-		@endforeach
-
 		<div class="contenedor-botones">
 
-		<a href="{{route('editar-perfil-ingreso')}}"> <button class="btn"><span>Editar</span></button> </a>
-
+			<a href="{{route('editar-perfil-ingreso')}}"><button class="btn"><span>Editar</span></button></a>
 
 		</div>
 		

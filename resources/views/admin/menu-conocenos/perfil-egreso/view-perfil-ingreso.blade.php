@@ -14,23 +14,23 @@
 
 		</div>
 
-		@foreach ($perfilegreso as $perfilegres)
-
 		<div class="contenedor-cuerpo-noticia">
 
 			<div class="contenedor-texto-conocenos">
 
-					<ul>
+				<ul>
 
-						<li>{{$perfilegres->elemento}}</li>
+					@foreach ($perfilegreso as $perfilegres)
 
-					</ul>
+					<li>{{$perfilegres->elemento}}</li>
 
-				</div>
+					@endforeach
+
+				</ul>
+
+			</div>
 
 		</div>
-
-		@endforeach
 
 		<div class="contenedor-botones">
 
