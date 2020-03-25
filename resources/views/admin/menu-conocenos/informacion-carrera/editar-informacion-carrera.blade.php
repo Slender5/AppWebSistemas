@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 	<!----------------------------------------------------------------- SELECT ---------------------------------------------------------->
 
 	<div class="seccion-principal">
@@ -11,40 +12,42 @@
 		<div class="contenedor-titulo-seccion-select">
 
 				<h3>Editar Información de la Carrera</h3>
-
-			<div class="contenedor-select-seccion">
 						
-				<button class="btn-seleccionar">Seleccionar</button>
-					<ul>
-							
-						<li><a href="#">Misión</a></li>
-						<li><a href="#">Visión</a></li>
-						<li><a href="#">Objetivos</a></li>
-					</ul>
-					<i></i>
-							
-			</div>
+				<h3>{{$informacion->categoria}}</h3>
+									
 
-		</div>
+		</div> 
 
 	<!--------------------------------------------------- FORMULARIO - EDITAR INFORMACION DE LA CARRERA ---------------------------------------------------->
 
 
-		<div class="formulario">
-			
-			<label for="">Información</label>
-			<textarea placeholder="Inserte Información Deseada ... "></textarea>
-			
-		</div>
+		<form class="form group" method="POST" action="/informacion/{{$informacion->slug}}" enctype="multipart/form-data">
 
-		<div class="contenedor-botones">
+			@method('PUT')
+			@csrf
+
+			<div class="formulario">
+				
+				<label for="">Información</label>
+				
+				<textarea type="text" name="descripcion">{{$informacion->descripcion}}</textarea> 
+				
+			</div>
+
+			<div class="contenedor-botones">
 					
-			<button class="btn"><span>Guardar</span></button>
-			<button class="btn"><span>Cancelar</span></button>
+				<button type="submit" class="btn"><span>Guardar</span></button>
 
-		</div>
+				<a href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+	
+			</div> 
+		
+		</form>  
 
+		
 
-	</div>
+		
+
+	</div> 
 
 @endsection

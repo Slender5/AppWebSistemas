@@ -4,13 +4,19 @@
 
 @section('content')
 
-		<div class="seccion-principal">
+@if(session('status'))
+    <div class="alert alert-success">
+        {{session('status')}}
+    </div>
+@endif
 
-	<!----------------------------------------------------------------- MISIÓN ---------------------------------------------------------->
+	<div class="seccion-principal">
+		@foreach($informaciones as $informacion)
+	
 
 			<div class="contenedor-titulo-seccion">
 
-					<h3>MISIÓN</h3>
+					<h3>{{$informacion->categoria}}</h3>
 
 			</div>
 
@@ -18,7 +24,7 @@
 
 					<div class="contenedor-texto-conocenos">
 
-						<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
+						<p>{{$informacion->descripcion}} </p>
 						
 					</div>
 
@@ -26,65 +32,12 @@
 
 			<div class="contenedor-botones">
 
+			<a href="/informacion/{{$informacion->slug}}/edit">
 			<button class="btn"><span>Editar</span></button>
-
-
-			</div>
-
+			</a>
 			
-	<!------------------------------------------------------------- VISIÓN ---------------------------------------------------------->
-
-			<div class="contenedor-titulo-seccion">
-
-					<h3>VISIÓN</h3>
-
 			</div>
-
-			<div class="contenedor-cuerpo-noticia">
-
-					<div class="contenedor-texto-conocenos">
-
-						<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
-						
-					</div>
-
-			</div>
-
-			<div class="contenedor-botones">
-
-			<button class="btn"><span>Editar</span></button>
-
-
-			</div>
-
-			
-
-	<!------------------------------------------------------------- OBJETIVOS ---------------------------------------------------------->
-
-			<div class="contenedor-titulo-seccion">
-
-					<h3>OBJETIVOS</h3>
-
-			</div>
-
-			<div class="contenedor-cuerpo-noticia">
-
-					<div class="contenedor-texto-conocenos">
-
-						<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
-						
-					</div>
-
-			</div>
-
-			<div class="contenedor-botones">
-
-			<button class="btn"><span>Editar</span></button>
-
-
-			</div>
-
-			
-		</div>
+	@endforeach
+</div>
 
 @endsection
