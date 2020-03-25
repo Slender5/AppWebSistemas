@@ -14,9 +14,9 @@ class ReticulaController extends Controller
      */
     public function index()
     {
-        $reticula = reticula::all();
+        $reticulas = reticula::all();
 
-        return view('admin.menu-conocenos.reticula.view-reticula', compact('reticula'));
+        return view('admin.menu-conocenos.reticula.view-reticula', compact('reticulas'));
     }
 
     /**
