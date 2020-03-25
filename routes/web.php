@@ -66,6 +66,13 @@ Route::get('eliminar-reticula/{slug}', 'ReticulaController@destroy')->name('elim
 
 Route::get('/reticula/descargar/{slug}', 'ReticulaController@download')->name('descargar');
 
+//Rutas Mision, Vision y objetivos
+
+Route::resource('informacion', 'InformacionCarreraController');
+
+
+//
+
 
 
 Auth::routes();
