@@ -17,7 +17,7 @@
 		<div class="formulario">
 			
 			<label for="">Descripción Perfil Ingreso</label>
-			<button class="btn"><span>Agregar</span></button>
+			<a href="{{route('crear-perfil-ingreso')}}"><button class="btn"><span>Agregar</span></button></a>
 
 			
 		</div>
@@ -39,40 +39,16 @@
 								</tr>
 							</thead>
 
-							<tr>
-								<td>1</td>
-								<td>Implementa aplicaciones computacionales para solucionar problemas de diversos contextos, integrando diferentes tecnologías, plataformas o dispositivos.</td>
-								<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-								<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
-							</tr>
+							@foreach ($perfilingreso as $perfilingres)
 
 							<tr>
-								<td>*</td>
-								<td>Diseña, desarrolla y aplica modelos computacionales para solucionar problemas, mediante la selección y uso de herramientas matemáticas.</td>
-								<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-								<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
+								<td>{{$perfilingres->vineta}}</td>
+								<td>{{$perfilingres->elemento}}</td>
+								<td><a href="eliminar-elemento/{{$perfilingres->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
+								<td><a href="/NuevoElemento/{{$perfilingres->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
 							</tr>
 
-							<tr>
-								<td>._</td>
-								<td>Diseña e implementa interfaces para la automatización de sistemas de hardware y desarrollo del software asociado.</td>
-								<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-								<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
-							</tr>
-
-							<tr>
-								<td>#</td>
-								<td>Coordina y participa en equipos multidisciplinarios para la aplicación de soluciones innovadoras en diferentes contextos.</td>
-								<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-								<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
-							</tr>
-
-							<tr>
-								<td>@</td>
-								<td>"Agregar más LI"</td>
-								<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-								<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
-							</tr>
+							@endforeach
 
 						</table>		
 
@@ -84,8 +60,7 @@
 
 		<div class="contenedor-botones">
 
-		<button class="btn"><span>Guardar</span></button>
-		<button class="btn"><span>Cancelar</span></button>
+		<a href="{{route('perfil-ingreso')}}"> <button class="btn"><span>Volver</span></button> </a>
 
 
 		</div>

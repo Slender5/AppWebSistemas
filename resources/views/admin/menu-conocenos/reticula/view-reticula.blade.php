@@ -8,9 +8,11 @@
 
 <!----------------------------------------------------------------- RETICULA 1 ---------------------------------------------------------->
 
+		@foreach ($reticula as $reticul)
+
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Reticula TECNM CAMPUS FCP Generación 1</h3>
+				<h3>{{$reticul->titulo}}</h3>
 
 		</div>
 
@@ -18,9 +20,9 @@
 
 				<div class="contenedor-texto-conocenos-reticula">
 
-					<p>INGENIERIA EN SIISTEMAS COMPUTACIONALES
-					PLAN:ISIC-2010-224
-					ESPECIALIDAD: Tecnologias de la información ISIE-TIN-2016-01</p>
+					<p>{{$reticul->programa}}</br>
+					PLAN: {{$reticul->plan}}</br>
+					ESPECIALIDAD: {{$reticul->especialidad}}</p>
 					
 				</div>
 
@@ -28,48 +30,24 @@
 
 		<div class="contenedor-enlaces">
 			
-			<a href="">Descargar Reticula TECNM Campus FCP Generación 1</a>
-			<button class="btn"><span>Descargar</span></button>
-
+			<a href="/VerReticula/{{$reticul->slug}}">{{$reticul->documento}}</a>
 
 		</div>
 
-<!----------------------------------------------------------------- RETICULA 2 ---------------------------------------------------------->
-
-		<div class="contenedor-titulo-seccion">
-
-				<h3>Reticula TECNM CAMPUS FCP Generación 2</h3>
-
-		</div>
-
-		<div class="contenedor-cuerpo-noticia">
-
-				<div class="contenedor-texto-conocenos-reticula">
-
-					<p>INGENIERIA EN SIISTEMAS COMPUTACIONALES
-					PLAN:ISIC-2010-224
-					ESPECIALIDAD: Tecnologias de la información ISIE-TIN-2016-01</p>
-					
-				</div>
-
-		</div>
-
-		<div class="contenedor-enlaces">
-			
-			<a href="">Descargar Reticula TECNM Campus FCP Generación 2</a>
-			<button class="btn"><span>Descargar</span></button>
-
-
-		</div>
+		@php
+		$var = $reticul->slug
+		@endphp
 
 		<div class="contenedor-botones">
-								
-			<button class="btn"><span>Editar</span></button>
+			
+			<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+
+			<a href="/VerReticula/{{$reticul->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
 
 		</div>
 
+		@endforeach
 				
 	</div>
-
 
 @endsection
