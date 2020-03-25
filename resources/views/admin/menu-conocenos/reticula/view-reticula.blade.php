@@ -42,7 +42,7 @@
 			
 			<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-			<a href="/VerReticula/{{$reticul->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
+			<a onclick="return confirm('¿Desea modificar esta retícula?')" href="/VerReticula/{{$reticul->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
 
 		</div>
 

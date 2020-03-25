@@ -36,13 +36,13 @@
 
 		    <div class="contenedor-botones">
 		                
-		        <button class="btn" type="submit"><span>Guardar</span></button>
+		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 		        
 		    </div>
 
 		</form>
 
-	    <a href="{{route('editar-perfil-egreso')}}"><button class="btn"><span>Cancelar</span></button></a>
+	    <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('editar-perfil-egreso')}}"><button class="btn"><span>Cancelar</span></button></a>
 
 	  </div>
 

@@ -34,7 +34,7 @@
 
 		<div class="contenedor-botones">
 
-		<a href="{{route('editar-perfil-egreso')}}"> <button class="btn"><span>Editar</span></button> </a>
+		<a onclick="return confirm('¿Desea editar la retícula del perfil de egreso?')" href="{{route('editar-perfil-egreso')}}"> <button class="btn"><span>Editar</span></button> </a>
 
 
 		</div>

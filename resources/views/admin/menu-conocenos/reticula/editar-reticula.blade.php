@@ -73,7 +73,7 @@
 
 			<div class="contenedor-botones">
 		                
-		        <button class="btn" type="submit"><span>Guardar</span></button>
+		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 		        
 		    </div>
 
@@ -82,7 +82,7 @@
 
 		<div class="contenedor-botones">
 		                
-		     <a href="{{route('reticula')}}"><button class="btn"><span>Cancelar</span></button></a>
+		     <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('reticula')}}"><button class="btn"><span>Cancelar</span></button></a>
 		        
 		</div>
 

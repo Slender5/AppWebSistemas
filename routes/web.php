@@ -23,9 +23,6 @@ Route::get('/informacion-carrera', function(){
 	return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
 })->name('informacion-carrera');
 
-Route::get('/informacion-carrera/editar-infomacion-carrera', function(){
-	return view('admin/menu-conocenos/informacion-carrera/editar-informacion-carrera');
-})->name('editar-informacion-carrera');
 
 //Rutas-perfil-egreso
 Route::get('perfil de egreso', 'PerfilEgresoController@index')->name('perfil-egreso');
