@@ -13,15 +13,8 @@
 				<h3>Eliminación Masiva de Noticias</h3>
 
 			<div class="contenedor-select-seccion">
-						
-				<button class="btn-seleccionar">Seleccionar Fecha</button>
-					<ul>
 							
-						<li><a><input type="month"></a></li>
-
-					</ul>
-					<i></i>
-
+					<input type="month">
 							
 			</div>
 
