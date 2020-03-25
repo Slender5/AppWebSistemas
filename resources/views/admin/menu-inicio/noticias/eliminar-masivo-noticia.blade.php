@@ -10,7 +10,7 @@
 
 		<div class="contenedor-titulo-seccion-select">
 
-				<h3>Eliminación Masiva de Noticias</h3>
+				<h3>Eliminación de Noticias</h3>
 
 			<div class="contenedor-select-seccion">
 							
