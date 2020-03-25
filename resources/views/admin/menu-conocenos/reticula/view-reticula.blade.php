@@ -30,7 +30,7 @@
 
 		<div class="contenedor-enlaces">
 			
-			<a href="/VerReticula/{{$reticul->slug}}">{{$reticul->documento}}</a>
+			<a target="_blank" rel="noopener noreferrer" href="/VerReticula/{{$reticul->slug}}">{{$reticul->documento}}</a>
 
 		</div>
 
