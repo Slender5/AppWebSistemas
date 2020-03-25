@@ -113,6 +113,12 @@ class ReticulaController extends Controller
 
         if ($request->hasFile('doc'))
         {
+            $oldFile = public_path().'/docs/ret/'.$reticula->documento;
+            if(File::exists($oldFile))
+            {
+                unlink($oldFile);
+            }
+            
             $file = $request->file('doc');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/docs/ret/',$name);
