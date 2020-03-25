@@ -10,7 +10,7 @@
 
 		<div class="contenedor-boton-CE">
 
-			<button class="btn"><span>Eliminación Masiva</span></button>
+			<button class="btn"><span>Eliminación Anual</span></button>
 			<button class="btn"><span>Agregar Noticia</span></button>
 
 					
