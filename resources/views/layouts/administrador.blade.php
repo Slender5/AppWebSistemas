@@ -75,7 +75,7 @@
 							
 				<li><a href="#"><i class="icono izquierda far fa-handshake"></i>Conócenos<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
-						<li><a href="{{route('informacion-carrera')}}"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
+						<li><a href="/informacion"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
 						<li><a href="{{route('perfil-ingreso')}}"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
 						<li><a href="{{route('perfil-egreso')}}"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
 						<li><a href="{{route('reticula')}}"><i class="icono izquierda fas fa-table"></i>Reticula</a></li>

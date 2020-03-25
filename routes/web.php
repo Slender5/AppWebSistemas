@@ -18,12 +18,6 @@ Route::get('/', function () {
     //return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
 });
 
-//Rutas-informacion-carrera
-Route::get('/informacion-carrera', function(){
-	return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
-})->name('informacion-carrera');
-
-
 //Rutas-perfil-egreso
 Route::get('perfil de egreso', 'PerfilEgresoController@index')->name('perfil-egreso');
 
