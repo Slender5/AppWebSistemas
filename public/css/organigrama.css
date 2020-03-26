@@ -1,0 +1,135 @@
+/*.organigrama * {
+	margin: 2px;
+	padding: 5px;
+	position: relative;
+  }*/
+
+.contenedor-organigrama{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#titulo-organigrama{
+	background: rgba(27,57,106,0.8);
+	width: 230px;
+	color: #fff;
+	padding: 15px;
+	margin: 0px;
+
+}
+
+.organigrama p{
+	 font-family: 'Roboto', sans-serif;
+	 line-height: 20px;
+	 text-align: center;
+	 margin-top: 20px;
+
+}
+  
+  .organigrama ul {
+	padding-top: 20px;
+	position: relative;
+  }
+  
+  .organigrama li {
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	padding: 0px 5px 0px 5px;
+	position: relative;
+  }
+  
+  .organigrama li::before,
+  .organigrama li::after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	border-top: 1px solid #1B396A;
+	width: 50%;
+	height: 20px;
+  }
+  
+  .organigrama li::after {
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #1B396A;
+  }
+  
+  .organigrama li:only-child::before,
+  .organigrama li:only-child::after {
+	display: none;
+  }
+  
+  .organigrama li:only-child {
+	padding-top: 0;
+  }
+  
+  .organigrama li:first-child::before,
+  .organigrama li:last-child::after {
+	border: 0 none;
+  }
+  
+  .organigrama li:last-child::before {
+	border-right: 1px solid #1B396A;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+  }
+  
+  .organigrama li:first-child::after {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+  }
+  
+  .organigrama ul ul::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-left: 1px solid #1B396A;
+	width: 0;
+	height: 20px;
+  }
+  
+  .organigrama li a {
+	border: 3px solid #8cc63e; /*Color Borde Cuadro*/
+	padding: 0.5em 0.2em;
+	width: 250px;
+	text-decoration: none;
+	color: #1B396A;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	transition: all 500ms;
+  }
+  
+  .organigrama li a:hover {
+	border: 3px solid #1B396A;
+	background: #fff;
+	display: inline-block;
+  }
+  
+  /* .organigrama>ul>li>a {
+	font-size: 1em;
+  }
+  
+ .organigrama>ul>li>ul>li>a {
+	width: 15%;
+  } Subdireccion Academica y de vinculacion*/ 
+  
+  .organigrama li {
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	padding: 20px 5px 0px 5px;
+	position: relative;
+  }
