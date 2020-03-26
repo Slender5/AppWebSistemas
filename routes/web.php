@@ -73,6 +73,9 @@ Route::resource('Lineas-Investigacion', 'LineasInvestigacionController');
 
 Route::get('Eliminar-Linea-Investigacion/{slug}', 'LineasInvestigacionController@destroy')->name('eliminar-Linea-Investigacion');
 
+//Rutas Cuerpos academicos
+Route::resource('CuerposAcademicos', 'CuerposAcademicosController');
+
 //Rutas Campo Laboral
 Route::get('Campo-Laboral', 'CampoLaboralController@index')->name('CampoLaboralIndex');
 
