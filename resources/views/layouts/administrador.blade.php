@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-noticias.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/alertas.css')}}">
 
 
 </head>
