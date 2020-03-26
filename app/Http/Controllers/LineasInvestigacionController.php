@@ -45,7 +45,7 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->slug = $request->input('slug');
         $lineainvestigacion->save();
 
-        return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');;
+        return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');
     }
 
     /**
@@ -88,10 +88,9 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->programa = $request->input('programa');
         $lineainvestigacion->linea = $request->input('linea');
         $lineainvestigacion->clave = $request->input('clave');
-        $lineainvestigacion->slug = $request->input('slug');
         $lineainvestigacion->save();
 
-        return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');;
+        return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');
     }
 
     /**
@@ -106,6 +105,6 @@ class LineasInvestigacionController extends Controller
         
         $lineainvestigacion->delete();
 
-        return redirect()->route('LineasInvestigacion')->with('status','Eliminación Exitosa');;
+        return redirect()->route('LineasInvestigacion')->with('status','Eliminación Exitosa');
     }
 }

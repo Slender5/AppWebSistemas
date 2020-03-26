@@ -84,7 +84,7 @@
 						<li><a href="{{route('LineasInvestigacion')}}"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>
+						<li><a href="{{route('CampoLaboralIndex')}}"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>
 
 					</ul>
 				</li>

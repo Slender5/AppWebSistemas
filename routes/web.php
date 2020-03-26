@@ -72,6 +72,20 @@ Route::resource('Lineas-Investigacion', 'LineasInvestigacionController');
 
 Route::get('Eliminar-Linea-Investigacion/{slug}', 'LineasInvestigacionController@destroy')->name('eliminar-Linea-Investigacion');
 
+//Rutas Campo Laboral
+Route::get('Campo-Laboral', 'CampoLaboralController@index')->name('CampoLaboralIndex');
+
+Route::get('Campo-Laboral-Lista', 'CampoLaboralController@list')->name('CampoLaboralLista');
+
+Route::get('Campo-Laboral-Crear', 'CampoLaboralController@create')->name('CampoLaboralCrear');
+
+Route::get('CampoLaboral-Editar', 'CampoLaboralController@edit')->name('CampoLaboralEditar');
+
+Route::resource('CampoLaboral', 'CampoLaboralController');
+
+Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->name('CampoLaboralEliminar');
+
+
 
 
 Auth::routes();

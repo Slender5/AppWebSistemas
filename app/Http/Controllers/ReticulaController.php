@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; 
 
 use App\reticula;
 use Illuminate\Http\Request;
@@ -14,9 +14,9 @@ class ReticulaController extends Controller
      */
     public function index()
     {
-        $reticula = reticula::all();
+        $reticulas = reticula::all();
 
-        return view('admin.menu-conocenos.reticula.view-reticula', compact('reticula'));
+        return view('admin.menu-conocenos.reticula.view-reticula', compact('reticulas'));
     }
 
     /**
@@ -129,10 +129,9 @@ class ReticulaController extends Controller
         $reticula->programa = $request->input('programa');
         $reticula->plan = $request->input('plan');
         $reticula->especialidad = $request->input('especialidad');
-        $reticula->slug = $request->input('slug');
         $reticula->save();
 
-        return redirect()->route('reticula')->with('status','Actualización Exitosa');;
+        return redirect()->route('reticula')->with('status','Actualización Exitosa');
     }
 
     /**

@@ -37,13 +37,6 @@
 
 			</div>
 
-			<div class="formulario">
-				
-				<label for="">Nombre único</label>
-				<input type="text" name="slug" id="slug-ret" value="{{$reticula->slug}}" placeholder="Inserte Identificador Único" class="form-control">
-
-			</div>
-
 			<div class="contenedor-cargar-img">
 
 					<div class="contenedor-txt-seccion">

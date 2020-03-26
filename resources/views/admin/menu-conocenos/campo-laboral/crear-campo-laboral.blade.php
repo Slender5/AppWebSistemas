@@ -14,22 +14,39 @@
 
     </div>
 
-    <div class="formulario"> 
-          <label for="">Viñetas</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="1-@-*-3-." class="form-control">
-    </div>
+    <form class="form-group" method="POST" action="/CampoLaboral">
+    @csrf
 
-    <div class="formulario"> 
-          <label for="">Información</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="Información" class="form-control">
-    </div>
+      <div class="formulario"> 
 
-    <div class="contenedor-botones">
-                
-        <button class="btn"><span>Guardar</span></button>
-        <button class="btn"><span>Cancelar</span></button>
+            <label for="">Viñetas</label>
+            <input type="text" name="vineta" id ="informacion-perfil" value="" placeholder="1-@-*-3-." class="form-control">
 
-    </div>
+      </div>
+
+      <div class="formulario"> 
+
+            <label for="">Información</label>
+            <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Información" class="form-control">
+
+      </div>
+
+      <div class="formulario"> 
+
+            <label for="">Identificador único</label>
+            <input type="text" name="slug" id ="informacion-perfil" value="" placeholder="Dato aleatorio" class="form-control">
+
+      </div>
+
+      <div class="contenedor-botones">
+                  
+          <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+
+      </div>
+
+    </form>   
+
+    <a onclick="return confirm('¿Desea cancelar el nuevo elemento?')" href="{{route('CampoLaboralLista')}}"><button class="btn"><span>Cancelar</span></button>
 
   </div>
 

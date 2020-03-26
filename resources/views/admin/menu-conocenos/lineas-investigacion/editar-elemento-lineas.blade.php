@@ -37,13 +37,6 @@
 
       </div>
 
-      <div class="formulario"> 
-
-        <label for="">Identificador único</label>
-        <input type="text" name="slug" id ="informacion-perfil" value="{{$lineainvestigacion->slug}}" placeholder="Identificador único eg: TCyC" class="form-control">
-
-      </div>
-
       <div class="contenedor-botones">
                 
         <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>

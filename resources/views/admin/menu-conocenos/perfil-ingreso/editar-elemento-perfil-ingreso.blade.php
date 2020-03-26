@@ -29,11 +29,6 @@
 		          <input type="text" name="elemento" id ="informacion-perfil" value="{{$perfilingreso->elemento}}" placeholder="Ingrese Información Deseada" class="form-control">
 		    </div>
 
-		    <div class="formulario"> 
-		          <label for="">Slug</label>
-		          <input type="text" name="slug" id ="informacion-perfil" value="{{$perfilingreso->slug}}" placeholder="Ingrese Identificador Del Elemento" class="form-control">
-		    </div>
-
 		    <div class="contenedor-botones">
 		                
 		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>

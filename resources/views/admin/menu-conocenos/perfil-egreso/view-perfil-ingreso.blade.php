@@ -10,7 +10,7 @@
 
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Perfil Egreso</h3>
+				<h3>Perfil Egreso</h3> 
 
 		</div>
 
@@ -34,7 +34,7 @@
 
 		<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea editar la retícula del perfil de egreso?')" href="{{route('editar-perfil-egreso')}}"> <button class="btn"><span>Editar</span></button> </a>
+		<a onclick="return confirm('¿Desea editar la lista del perfil de egreso?')" href="{{route('editar-perfil-egreso')}}"><button class="btn"><span>Editar</span></button> </a>
 
 
 		</div>

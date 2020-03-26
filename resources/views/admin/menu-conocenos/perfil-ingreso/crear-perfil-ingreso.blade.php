@@ -29,7 +29,7 @@
 		    </div>
 
 		    <div class="formulario"> 
-		          <label for="">Slug</label>
+		          <label for="">Identificador único</label>
 		          <input type="text" name="slug" id ="informacion-perfil" value="" placeholder="Ingrese Identificador Del Elemento" class="form-control">
 		    </div>
 

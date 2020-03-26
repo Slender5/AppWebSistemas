@@ -14,11 +14,11 @@
 
 <!----------------------------------------------------------------- RETICULA 1 ---------------------------------------------------------->
 
-		@foreach ($reticula as $reticul)
+		@foreach ($reticulas as $reticula)
 
 		<div class="contenedor-titulo-seccion">
 
-				<h3>{{$reticul->titulo}}</h3>
+				<h3>{{$reticula->titulo}}</h3>
 
 		</div>
 
@@ -26,9 +26,9 @@
 
 				<div class="contenedor-texto-conocenos-reticula">
 
-					<p>{{$reticul->programa}}</br>
-					PLAN: {{$reticul->plan}}</br>
-					ESPECIALIDAD: {{$reticul->especialidad}}</p>
+					<p>{{$reticula->programa}}</br>
+					PLAN: {{$reticula->plan}}</br>
+					ESPECIALIDAD: {{$reticula->especialidad}}</p>
 					
 				</div>
 
@@ -36,19 +36,19 @@
 
 		<div class="contenedor-enlaces">
 			
-			<a target="_blank" rel="noopener noreferrer" href="/VerReticula/{{$reticul->slug}}">{{$reticul->documento}}</a>
+			<a target="_blank" rel="noopener noreferrer" href="/VerReticula/{{$reticula->slug}}">{{$reticula->documento}}</a>
 
 		</div>
 
 		@php
-		$var = $reticul->slug
+		$var = $reticula->slug
 		@endphp
 
 		<div class="contenedor-botones">
 			
 			<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-			<a onclick="return confirm('¿Desea modificar esta retícula?')" href="/VerReticula/{{$reticul->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
+			<a onclick="return confirm('¿Desea modificar esta retícula?')" href="/VerReticula/{{$reticula->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
 
 		</div>
 
