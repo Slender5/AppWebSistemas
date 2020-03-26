@@ -5,8 +5,8 @@
 @section('content')
 
 @if(session('status'))
-    <div class="contenedor-titulo-seccion">
-        <h2>{{session('status')}}</h2>
+    <div class="alert alert-success">
+        {{session('status')}}
     </div>
 @endif
 
