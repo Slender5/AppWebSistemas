@@ -14,7 +14,11 @@
 
 			<div class="contenedor-select-seccion">
 							
+				<div class="formulario">
+					
 					<input type="month">
+
+				</div>
 							
 			</div>
 
