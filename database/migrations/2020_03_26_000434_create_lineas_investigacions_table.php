@@ -15,7 +15,11 @@ class CreateLineasInvestigacionsTable extends Migration
     {
         Schema::create('lineas_investigacions', function (Blueprint $table) {
             $table->id();
+            $table->string('programa');
+            $table->string('linea');
+            $table->string('clave');
             $table->timestamps();
+            $table->string('slug')->unique();
         });
     }
 

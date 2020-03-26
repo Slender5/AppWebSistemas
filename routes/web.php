@@ -70,7 +70,7 @@ Route::get('EditarLineaInvestigacion', 'LineasInvestigacionController@edit')->na
 
 Route::resource('Lineas-Investigacion', 'LineasInvestigacionController');
 
-Route::get('EliminarLineaInvestigacion/{slug}', 'ReticulaController@destroy')->name('eliminar-Linea-Investigacion');
+Route::get('Eliminar-Linea-Investigacion/{slug}', 'LineasInvestigacionController@destroy')->name('eliminar-Linea-Investigacion');
 
 
 

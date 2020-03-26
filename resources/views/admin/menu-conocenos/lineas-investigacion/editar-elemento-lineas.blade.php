@@ -4,36 +4,55 @@
 
 @section('content')
 
-	  <div class="seccion-principal">
+  <div class="seccion-principal">
     
-      <div class="contenedor-titulo-seccion">
+    <div class="contenedor-titulo-seccion">
 
-        <h3>Actualizar Datos</h3>
+      <h3>Actualizar Datos</h3>
 
     </div>
 
-    <div class="formulario"> 
-      
-          <label for="">Programa</label>
-          <input type="text" name="" id ="viñeta" value="" placeholder="Nombre del Programa" class="form-control">
-    </div>
+    <form class="form-group" method="POST" action="/Lineas-Investigacion/{{$lineainvestigacion->slug}}">
+    @method('PUT')
+    @csrf
 
-    <div class="formulario"> 
-          <label for="">Líneas de Investigación</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="Nombre de la Línea de Investigación" class="form-control">
-    </div>
+      <div class="formulario"> 
+        
+        <label for="">Programa</label>
+        <input type="text" name="programa" id ="viñeta" value="{{$lineainvestigacion->programa}}" placeholder="Nombre del Programa" class="form-control">
 
-    <div class="formulario"> 
-          <label for="">CLave LI TECNM</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="Clave Línea de Investigación TECNM" class="form-control">
-    </div>
+      </div>
 
-    <div class="contenedor-botones">
+      <div class="formulario"> 
+
+        <label for="">Líneas de Investigación</label>
+        <input type="text" name="linea"linea id ="informacion-perfil" value="{{$lineainvestigacion->linea}}" placeholder="Nombre de la Línea de Investigación" class="form-control">
+
+      </div>
+
+      <div class="formulario"> 
+        
+        <label for="">CLave LI TECNM</label>
+        <input type="text" name="clave" id ="informacion-perfil" value="{{$lineainvestigacion->clave}}" placeholder="Clave Línea de Investigación TECNM" class="form-control">
+
+      </div>
+
+      <div class="formulario"> 
+
+        <label for="">Identificador único</label>
+        <input type="text" name="slug" id ="informacion-perfil" value="{{$lineainvestigacion->slug}}" placeholder="Identificador único eg: TCyC" class="form-control">
+
+      </div>
+
+      <div class="contenedor-botones">
                 
-        <button class="btn"><span>Guardar</span></button>
-        <button class="btn"><span>Cancelar</span></button>
+        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-    </div>
+      </div>
+
+    </form>
+
+    <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('LineasInvestigacion')}}"><button class="btn"><span>Cancelar</span></button></a>
 
   </div>
 

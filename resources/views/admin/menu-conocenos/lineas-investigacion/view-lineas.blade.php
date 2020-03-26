@@ -17,7 +17,7 @@
 
 				<div class="contenedor-botones">
 
-					<button class="btn"><span>Agregar</span></button>
+					<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('crear-Linea-Investigacion')}}"><button class="btn"><span>Agregar</span></button></a>
 
 				</div>
 					
@@ -39,43 +39,23 @@
 										</tr>
 									</thead>
 
-									<tr>
-										<td>Ingeniería en Sistemas Computacionales</td>
-										<td>Redes Gestión de Datos y Conectividad</td>
-										<td>LGAC-2017-SFCP-ISCO-10</td>
-										<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-										<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
-									</tr>
+									@foreach ($lineainvestigacion as $lineainvestigacio)
 
 									<tr>
-										<td>Ingeniería en Sistemas Computacionales</td>
-										<td>Tecnología Aplicada a la Educación</td>
-										<td>LGAC-2017-SFCP-ISCO-11</td>
-										<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-										<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>	
+										<td>{{$lineainvestigacio->programa}}</td>
+										<td>{{$lineainvestigacio->linea}}</td>
+										<td>{{$lineainvestigacio->clave}}</td>
+										<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Eliminar-Linea-Investigacion/{{$lineainvestigacio->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
+										<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/Lineas-Investigacion/{{$lineainvestigacio->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
 									</tr>
 
-									<tr>
-										<td>Ingeniería en Sistemas Computacionales</td>
-										<td>Tecnologías de Desarrollo Web Y Móvil</td>
-										<td>LGAC-2017-SFCP-ISCO-11</td>
-										<td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-										<td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td>
-									</tr>
+									@endforeach
 
 								</table>		
 
 							</div>
 
 						</div>
-
-				</div>
-
-				<div class="contenedor-botones">
-
-				<button class="btn"><span>Guardar</span></button>
-				<button class="btn"><span>Cancelar</span></button>
-
 
 				</div>
 				

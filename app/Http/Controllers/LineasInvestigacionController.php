@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\lineas_investigacion;
 use Illuminate\Http\Request;
 
 class LineasInvestigacionController extends Controller
@@ -13,7 +14,9 @@ class LineasInvestigacionController extends Controller
      */
     public function index()
     {
-        return view('admin.menu-conocenos.lineas-investigacion.view-lineas');
+        $lineainvestigacion = lineas_investigacion::all();
+
+        return view('admin.menu-conocenos.lineas-investigacion.view-lineas', compact('lineainvestigacion'));
     }
 
     /**
@@ -23,7 +26,7 @@ class LineasInvestigacionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.menu-conocenos.lineas-investigacion.agregar-elemento-lineas');
     }
 
     /**
@@ -34,7 +37,15 @@ class LineasInvestigacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lineainvestigacion = new lineas_investigacion();
+
+        $lineainvestigacion->programa = $request->input('programa');
+        $lineainvestigacion->linea = $request->input('linea');
+        $lineainvestigacion->clave = $request->input('clave');
+        $lineainvestigacion->slug = $request->input('slug');
+        $lineainvestigacion->save();
+
+        return redirect()->route('LineasInvestigacion');
     }
 
     /**
@@ -43,9 +54,11 @@ class LineasInvestigacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+
+        return $lineainvestigacion;
     }
 
     /**
@@ -54,9 +67,11 @@ class LineasInvestigacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+
+        return view('admin.menu-conocenos.lineas-investigacion.editar-elemento-lineas', compact('lineainvestigacion'));
     }
 
     /**
@@ -66,9 +81,17 @@ class LineasInvestigacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
-        //
+        $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+
+        $lineainvestigacion->programa = $request->input('programa');
+        $lineainvestigacion->linea = $request->input('linea');
+        $lineainvestigacion->clave = $request->input('clave');
+        $lineainvestigacion->slug = $request->input('slug');
+        $lineainvestigacion->save();
+
+        return redirect()->route('LineasInvestigacion');
     }
 
     /**
@@ -77,8 +100,12 @@ class LineasInvestigacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+        
+        $lineainvestigacion->delete();
+
+        return redirect()->route('LineasInvestigacion');
     }
 }
