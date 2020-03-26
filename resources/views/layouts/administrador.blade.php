@@ -168,6 +168,11 @@
 	<script src="{{ asset('js/select.js')}}"></script>
 
 	<script src="{{ asset('btn-cargar.js')}}"></script>
+
+	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>
+	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+	<script src="{{ asset('js/slider.js')}}"></script>
+    
 </body>
 
 </html>
