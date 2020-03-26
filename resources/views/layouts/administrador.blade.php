@@ -14,6 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/alertas.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 
 
 </head>
