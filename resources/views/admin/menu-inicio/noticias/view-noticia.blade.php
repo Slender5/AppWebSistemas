@@ -20,8 +20,12 @@
 
 			<div class="buscador">
 
-				<form action="" method="">		    
-						<input type="search" placeholder="Noticia">	   	
+				<form action="" method="">
+                
+                	<div class="formulario">
+						<input type="search" placeholder="Noticia">	
+					</div>
+                    
 				</form>
 
 				<button type="" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
