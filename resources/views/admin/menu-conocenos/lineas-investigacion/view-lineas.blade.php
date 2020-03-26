@@ -4,6 +4,11 @@
 
 @section('content')
 
+@if(session('status'))
+    <div class="contenedor-titulo-seccion">
+        <h2>{{session('status')}}</h2>
+    </div>
+@endif
 
 			<div class="seccion-principal">
 

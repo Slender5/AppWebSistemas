@@ -45,7 +45,7 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->slug = $request->input('slug');
         $lineainvestigacion->save();
 
-        return redirect()->route('LineasInvestigacion');
+        return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');;
     }
 
     /**
@@ -91,7 +91,7 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->slug = $request->input('slug');
         $lineainvestigacion->save();
 
-        return redirect()->route('LineasInvestigacion');
+        return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');;
     }
 
     /**
@@ -106,6 +106,6 @@ class LineasInvestigacionController extends Controller
         
         $lineainvestigacion->delete();
 
-        return redirect()->route('LineasInvestigacion');
+        return redirect()->route('LineasInvestigacion')->with('status','Eliminación Exitosa');;
     }
 }

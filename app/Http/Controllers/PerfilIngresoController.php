@@ -56,7 +56,7 @@ class PerfilIngresoController extends Controller
         $perfilingreso->slug = $request->input('slug');
         $perfilingreso->save();
 
-        return redirect()->route('editar-perfil-ingreso');
+        return redirect()->route('editar-perfil-ingreso')->with('status','Registro Exitoso');;
     }
 
     /**
@@ -100,7 +100,7 @@ class PerfilIngresoController extends Controller
         $perfilingreso->slug = $request->input('slug');
         $perfilingreso->save();
 
-        return redirect()->route('editar-perfil-ingreso');
+        return redirect()->route('editar-perfil-ingreso')->with('status','Actualización Exitosa');;
     }
 
     /**
@@ -114,6 +114,6 @@ class PerfilIngresoController extends Controller
         $perfilingreso = perfil_ingreso::where('slug', '=', $slug)->firstOrFail();
         $perfilingreso->delete();
 
-        return redirect()->route('editar-perfil-ingreso');
+        return redirect()->route('editar-perfil-ingreso')->with('status','Eliminación Exitosa');;
     }
 }

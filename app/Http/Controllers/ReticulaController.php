@@ -132,7 +132,7 @@ class ReticulaController extends Controller
         $reticula->slug = $request->input('slug');
         $reticula->save();
 
-        return redirect()->route('reticula');
+        return redirect()->route('reticula')->with('status','Actualización Exitosa');;
     }
 
     /**

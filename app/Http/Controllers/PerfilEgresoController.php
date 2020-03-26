@@ -51,7 +51,7 @@ class PerfilEgresoController extends Controller
         $perfilegreso->slug = $request->input('slug');
         $perfilegreso->save();
 
-        return redirect()->route('editar-perfil-egreso');
+        return redirect()->route('editar-perfil-egreso')->with('status','Registro Exitoso');;
     }
 
     /**
@@ -95,7 +95,7 @@ class PerfilEgresoController extends Controller
         $perfilegreso->slug = $request->input('slug');
         $perfilegreso->save();
 
-        return redirect()->route('editar-perfil-egreso');
+        return redirect()->route('editar-perfil-egreso')->with('status','Actualización Exitosa');;
     }
 
     /**
@@ -109,6 +109,6 @@ class PerfilEgresoController extends Controller
         $perfilegreso = perfil_egreso::where('slug', '=', $slug)->firstOrFail();
         $perfilegreso->delete();
 
-        return redirect()->route('editar-perfil-egreso');
+        return redirect()->route('editar-perfil-egreso')->with('status','Eliminación Exitosa');;
     }
 }
