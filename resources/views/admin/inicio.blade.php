@@ -1,14 +1,13 @@
 @extends('layouts.administration')
 
-
-
 @section('title', 'Principal')
+
 
 @section('content-slider')
 
 	<!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
-			<div class="contenedor-slider">
+
 
 				<!------------------------------------------------------- Slider ---------------------------------------------------->
 
@@ -18,47 +17,31 @@
 
 						<ul class="slides">
 
-							<li>
-								<img src="img/1.jpg" alt="">
-								<section class="caption">
-									<h2>joven estudiante se gradua, como maestro pokemon</h2>
-								</section>
-							</li>
+							@foreach ($sliders as $slider)
+
 
 							<li>
-								<img src="img/2.jpg" alt="">
+								<img src="/images/slider/{{$slider->image}}" alt="">
 								<section class="caption">
-									<h2>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante</h2>
+									<h2>{{$slider->contenido}}</h2>
 								</section>
 							</li>
+						@endforeach
 
-							<li>
-								<img src="img/3.jpg" alt="">
-								<section class="caption">
-									<h2>joven estudiante se gradua, como maestro pokemon</h2>
-								</section>
-							</li>
-
-							<li>
-								<img src="img/2.jpg" alt="">
-								<section class="caption">
-									<h2>joven estudiante se gradua, como maestro pokemon</h2>
-								</section>
-							</li>
 
 						</ul>
 					</div>
 
 					<div class="contenedor-botones">
 
-						<button class="btn"><span>Editar</span></button>
+				<a href="/slider">		<button class="btn"><span>Editar</span></button></a>
 
 					</div>
 
 				</div>
 
 
-			</div>
+
 
 @endsection
 
@@ -67,11 +50,14 @@
 
 	<!----------------------------------------------------------------- NOTICIA N1 ---------------------------------------------------------->
 
+
 	<div class="seccion-principal">
+	@foreach ($noticias as $noticia)
+		@if($loop->first)
 
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Joven estudiante se gradua, como maestro pokemon</h3>
+				<h3>{{$noticia->titulo}}</h3>
 
 		</div>
 
@@ -79,13 +65,13 @@
 
 				<div class="contenedor-img-noticia">
 
-					<img src="img/QRoo.png">
+					<img src="/images/news/{{$noticia->newimage}}">
 
 				</div>
 
 				<div class="contenedor-texto">
 
-					<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
+					<p>{{$noticia->redaccion}}</p>
 
 				</div>
 
@@ -98,7 +84,8 @@
 
 
 		</div>
-
+	@endif
+	@endforeach
 
 
 
@@ -113,43 +100,29 @@
 
 			</div>
 
-			<div class="contenedor-seccion-preliminar">
+			@foreach ($noticias as $noticia)
+				<div class="contenedor-seccion-preliminar">
 
-				<img src="img/sistemas.png">
-				<h2>Joven Ve Nopor en Salon de Clases</h2>
+					<img src="/images/news/{{$noticia->newimage}}">
+					<h2>{{$noticia->titulo}}</h2>
 
-			</div>
+				</div>
+			@endforeach
 
-			<div class="contenedor-seccion-preliminar">
 
-				<img src="img/sistemas.png">
-				<h2>Joven Ve Nopor en Salon de Clases</h2>
-
-			</div>
-
-			<div class="contenedor-seccion-preliminar">
-
-				<img src="img/sistemas.png">
-				<h2>Joven Ve Nopor en Salon de Clases</h2>
-
-			</div>
-
-			<div class="contenedor-seccion-preliminar">
-
-				<img src="img/sistemas.png">
-				<h2>Joven Ve Nopor en Salon de Clases</h2>
-
-			</div>
 
 			<div class="contenedor-botones-ver">
 
-			<button class="btn centrado"><span>Ver Más...</span></button>
-
-
+		<a href="/noticias-admin">
+			<button class="btn centrado">
+				<span>Ver Más...</span>
+			</button>
+		</a>
 			</div>
 
 		</div>
 
 	</div>
+
 
 @endsection

@@ -150,7 +150,18 @@ class NoticiaController extends Controller
     //////Eliminacion anual////////////////
     public function eliminaranual()
     {
-      $noticias = Noticia::orderBy('id', 'desc')->paginate(4);
+      $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
       return view('admin.news.eliminacion-anual',compact('noticias'));
     }
+
+    public function eliminacion(Request $request)
+    {
+
+      ///// DELETE from noticias WHERE created_at BETWEEN '2012-01-01' AND '2012-12-31'
+      $noticias = Noticias::where('created_at', $fecha)->delete();
+
+      return view('admin.news.eliminacion-anual',compact('noticias'));
+    }
+
+
 }
