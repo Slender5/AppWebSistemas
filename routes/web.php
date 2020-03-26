@@ -62,15 +62,15 @@ Route::get('/reticula/descargar/{slug}', 'ReticulaController@download')->name('d
 Route::resource('informacion', 'InformacionCarreraController');
 
 //Rutas Lineas Investigación
-Route::get('reticula', 'ReticulaController@index')->name('reticula');
+Route::get('LineasInvestigacion', 'LineasInvestigacionController@index')->name('LineasInvestigacion');
 
-Route::get('Crear Reticula', 'ReticulaController@create')->name('crear-reticula');
+Route::get('CrearLineaInvestigacion', 'LineasInvestigacionController@create')->name('crear-Linea-Investigacion');
 
-Route::get('Editar reticula', 'ReticulaController@edit')->name('editar-reticula');
+Route::get('EditarLineaInvestigacion', 'LineasInvestigacionController@edit')->name('editar-Linea-Investigacion');
 
 Route::resource('Lineas-Investigacion', 'LineasInvestigacionController');
 
-Route::get('eliminar-reticula/{slug}', 'ReticulaController@destroy')->name('eliminar-reticula');
+Route::get('EliminarLineaInvestigacion/{slug}', 'ReticulaController@destroy')->name('eliminar-Linea-Investigacion');
 
 
 

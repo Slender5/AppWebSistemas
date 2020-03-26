@@ -79,7 +79,7 @@
 						<li><a href="{{route('perfil-ingreso')}}"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
 						<li><a href="{{route('perfil-egreso')}}"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
 						<li><a href={{route('reticula')}}><i class="icono izquierda fas fa-table"></i>Reticula</a></li>
-						<li><a href="#"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
+						<li><a href="{{route('LineasInvestigacion')}}"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>

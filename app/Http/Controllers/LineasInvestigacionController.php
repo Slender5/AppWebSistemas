@@ -13,7 +13,7 @@ class LineasInvestigacionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.menu-conocenos.lineas-investigacion.view-lineas');
     }
 
     /**
