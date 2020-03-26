@@ -19,22 +19,17 @@
         <div class="formulario"> 
           
               <label for="">Programa</label>
-              <input type="text" name="programa" id ="viñeta" value="" placeholder="Nombre del Programa" class="form-control">
+              <input type="text" name="programa" id ="viñeta" value="" placeholder="Nombre del Programa" class="form-control" required>
         </div>
 
         <div class="formulario"> 
               <label for="">Líneas de Investigación</label>
-              <input type="text" name="linea" id ="informacion-perfil" value="" placeholder="Nombre de la Línea de Investigación" class="form-control">
+              <input type="text" name="linea" id ="informacion-perfil" value="" placeholder="Nombre de la Línea de Investigación" class="form-control" required>
         </div>
 
         <div class="formulario"> 
               <label for="">CLave LI TECNM</label>
-              <input type="text" name="clave" id ="informacion-perfil" value="" placeholder="Clave Línea de Investigación TECNM" class="form-control">
-        </div>
-
-        <div class="formulario"> 
-              <label for="">Identificador único</label>
-              <input type="text" name="slug" id ="informacion-perfil" value="" placeholder="Identificador único eg: TCyC" class="form-control">
+              <input type="text" name="clave" id ="informacion-perfil" value="" placeholder="Clave Línea de Investigación TECNM" class="form-control" required>
         </div>
 
         <div class="contenedor-botones">

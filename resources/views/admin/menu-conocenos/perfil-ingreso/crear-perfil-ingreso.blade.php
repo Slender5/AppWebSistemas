@@ -14,23 +14,18 @@
 
 	    </div>
 
-	    <form class="form-group" method="POST" action="/NuevoElemento">
+	    <form class="form-group" method="POST" action="/PerfilIngreso">
 	    	@csrf
 
 		    <div class="formulario"> 
 		      
 		          <label for="">Viñeta</label>
-		          <input type="text" name="vineta" id ="viñeta" value="" placeholder="Inserte Viñeta" class="form-control">
+		          <input type="text" name="vineta" id ="viñeta" value="" placeholder="Inserte Viñeta" class="form-control" required>
 		    </div>
 
 		    <div class="formulario"> 
 		          <label for="">Información</label>
-		          <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Ingrese Información Deseada" class="form-control">
-		    </div>
-
-		    <div class="formulario"> 
-		          <label for="">Identificador único</label>
-		          <input type="text" name="slug" id ="informacion-perfil" value="" placeholder="Ingrese Identificador Del Elemento" class="form-control">
+		          <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Ingrese Información Deseada" class="form-control" required>
 		    </div>
 
 		    <div class="contenedor-botones">

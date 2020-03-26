@@ -14,19 +14,19 @@
 
 	    </div>
 
-	    <form class="form-group" method="POST" action="/NuevoElemento/{{$perfilingreso->slug}}">
+	    <form class="form-group" method="POST" action="/PerfilIngreso/{{$perfilingreso->slug}}">
 	    @method('PUT')
 	    @csrf
 
 		    <div class="formulario"> 
 		      
 		          <label for="">Viñeta</label>
-		          <input type="text" name="vineta" id ="viñeta" value="{{$perfilingreso->vineta}}" placeholder="Inserte Viñeta" class="form-control">
+		          <input type="text" name="vineta" id ="viñeta" value="{{$perfilingreso->vineta}}" placeholder="Inserte Viñeta" class="form-control" required>
 		    </div>
 
 		    <div class="formulario"> 
 		          <label for="">Información</label>
-		          <input type="text" name="elemento" id ="informacion-perfil" value="{{$perfilingreso->elemento}}" placeholder="Ingrese Información Deseada" class="form-control">
+		          <input type="text" name="elemento" id ="informacion-perfil" value="{{$perfilingreso->elemento}}" placeholder="Ingrese Información Deseada" class="form-control" required>
 		    </div>
 
 		    <div class="contenedor-botones">

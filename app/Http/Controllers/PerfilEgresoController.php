@@ -48,7 +48,7 @@ class PerfilEgresoController extends Controller
         $perfilegreso = new perfil_egreso();
         $perfilegreso->vineta = $request->input('vineta');
         $perfilegreso->elemento = $request->input('elemento');
-        $perfilegreso->slug = $request->input('slug');
+        $perfilegreso->slug = time();
         $perfilegreso->save();
 
         return redirect()->route('editar-perfil-egreso')->with('status','Registro Exitoso');
@@ -92,6 +92,7 @@ class PerfilEgresoController extends Controller
         $perfilegreso = perfil_egreso::where('slug', '=', $slug)->firstOrFail();
         $perfilegreso->vineta = $request->input('vineta');
         $perfilegreso->elemento = $request->input('elemento');
+        $perfilegreso->slug = time();
         $perfilegreso->save();
 
         return redirect()->route('editar-perfil-egreso')->with('status','Actualización Exitosa');

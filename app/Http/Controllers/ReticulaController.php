@@ -51,7 +51,7 @@ class ReticulaController extends Controller
         $reticula->programa = $request->input('programa');
         $reticula->plan = $request->input('plan');
         $reticula->especialidad = $request->input('especialidad');
-        $reticula->slug = $request->input('slug');
+        $reticula->slug = time();
         $reticula->save();
 
         return redirect()->route('reticula');
@@ -120,7 +120,7 @@ class ReticulaController extends Controller
             }
 
             $file = $request->file('doc');
-            $name = time().$file->getClientOriginalName();
+            $name = time().'-'.$file->getClientOriginalName();
             $file->move(public_path().'/docs/ret/',$name);
             $reticula->documento = $name;
         }
@@ -129,6 +129,7 @@ class ReticulaController extends Controller
         $reticula->programa = $request->input('programa');
         $reticula->plan = $request->input('plan');
         $reticula->especialidad = $request->input('especialidad');
+        $reticula->slug = time();
         $reticula->save();
 
         return redirect()->route('reticula')->with('status','Actualización Exitosa');

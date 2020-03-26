@@ -48,7 +48,7 @@ class CampoLaboralController extends Controller
 
         $campolaboral->vineta = $request->input('vineta');
         $campolaboral->elemento = $request->input('elemento');
-        $campolaboral->slug = $request->input('slug');
+        $campolaboral->slug = time();
         $campolaboral->save();
 
         return redirect()->route('CampoLaboralLista')->with('status','Registro Exitoso');
@@ -93,6 +93,7 @@ class CampoLaboralController extends Controller
 
         $campolaboral->vineta = $request->input('vineta');
         $campolaboral->elemento = $request->input('elemento');
+        $campolaboral->slug = time();
         $campolaboral->save();
 
         return redirect()->route('CampoLaboralLista')->with('status','Actualización Exitosa');

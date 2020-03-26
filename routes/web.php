@@ -18,31 +18,32 @@ Route::get('/', function () {
     //return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
 });
 
-//Rutas-perfil-egreso
-Route::get('perfil de egreso', 'PerfilEgresoController@index')->name('perfil-egreso');
-
-Route::get('Editar perfil de egreso', 'PerfilEgresoController@list')->name('editar-perfil-egreso');
-
-Route::get('Editar perfil egreso', 'PerfilEgresoController@create')->name('crear-perfil-egreso');
-
-Route::get('Editar elemento eg', 'PerfilEgresoController@edit')->name('editar-elemento-eg');
-
-Route::resource('NuevoElementoEg', 'PerfilEgresoController');
-
-Route::get('eliminar-elemento-eg/{slug}', 'PerfilEgresoController@destroy')->name('eliminar-elemento-eg');
-
 //Rutas-perfil-ingreso
-Route::get('perfil de ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso');
+Route::get('Perfil-Ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso');
 
-Route::get('Editar perfil de ingreso', 'PerfilIngresoController@list')->name('editar-perfil-ingreso');
+Route::get('Perfil-Ingreso-Lista', 'PerfilIngresoController@list')->name('editar-perfil-ingreso');
 
-Route::get('Editar perfil ingreso', 'PerfilIngresoController@create')->name('crear-perfil-ingreso');
+Route::get('Perfil-Ingreso-Crear', 'PerfilIngresoController@create')->name('crear-perfil-ingreso');
 
-Route::get('Editar elemento', 'PerfilIngresoController@edit')->name('editar-elemento');
+Route::get('Perfil-Ingreso-Editar', 'PerfilIngresoController@edit')->name('editar-elemento');
 
-Route::resource('NuevoElemento', 'PerfilIngresoController');
+Route::resource('PerfilIngreso', 'PerfilIngresoController');
 
-Route::get('eliminar-elemento/{slug}', 'PerfilIngresoController@destroy')->name('eliminar-elemento');
+Route::get('Perfil-Ingreso-Eliminar/{slug}', 'PerfilIngresoController@destroy')->name('eliminar-elemento');
+
+//Rutas-perfil-egreso
+Route::get('Perfil-Egreso', 'PerfilEgresoController@index')->name('perfil-egreso');
+
+Route::get('Perfil-Egreso-Lista', 'PerfilEgresoController@list')->name('editar-perfil-egreso');
+
+Route::get('Perfil-Egreso-Crear', 'PerfilEgresoController@create')->name('crear-perfil-egreso');
+
+Route::get('Perfil-Egreso-Editar', 'PerfilEgresoController@edit')->name('editar-elemento-eg');
+
+Route::resource('PerfilEgreso', 'PerfilEgresoController');
+
+Route::get('Perfil-Egreso-Eliminar/{slug}', 'PerfilEgresoController@destroy')->name('eliminar-elemento-eg');
+
 
 //Rutas-reticula
 Route::get('reticula', 'ReticulaController@index')->name('reticula');

@@ -53,7 +53,7 @@ class PerfilIngresoController extends Controller
         $perfilingreso = new perfil_ingreso();
         $perfilingreso->vineta = $request->input('vineta');
         $perfilingreso->elemento = $request->input('elemento');
-        $perfilingreso->slug = $request->input('slug');
+        $perfilingreso->slug = time();
         $perfilingreso->save();
 
         return redirect()->route('editar-perfil-ingreso')->with('status','Registro Exitoso');
@@ -97,6 +97,7 @@ class PerfilIngresoController extends Controller
         $perfilingreso = perfil_ingreso::where('slug', '=', $slug)->firstOrFail();
         $perfilingreso->vineta = $request->input('vineta');
         $perfilingreso->elemento = $request->input('elemento');
+        $perfilingreso->slug = time();
         $perfilingreso->save();
 
         return redirect()->route('editar-perfil-ingreso')->with('status','Actualización Exitosa');

@@ -42,7 +42,7 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->programa = $request->input('programa');
         $lineainvestigacion->linea = $request->input('linea');
         $lineainvestigacion->clave = $request->input('clave');
-        $lineainvestigacion->slug = $request->input('slug');
+        $lineainvestigacion->slug = time();
         $lineainvestigacion->save();
 
         return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');
@@ -88,6 +88,7 @@ class LineasInvestigacionController extends Controller
         $lineainvestigacion->programa = $request->input('programa');
         $lineainvestigacion->linea = $request->input('linea');
         $lineainvestigacion->clave = $request->input('clave');
+        $lineainvestigacion->slug = time();
         $lineainvestigacion->save();
 
         return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');

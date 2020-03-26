@@ -19,21 +19,21 @@
       <div class="formulario"> 
         
         <label for="">Programa</label>
-        <input type="text" name="programa" id ="viñeta" value="{{$lineainvestigacion->programa}}" placeholder="Nombre del Programa" class="form-control">
+        <input type="text" name="programa" id ="viñeta" value="{{$lineainvestigacion->programa}}" placeholder="Nombre del Programa" class="form-control" required>
 
       </div>
 
       <div class="formulario"> 
 
         <label for="">Líneas de Investigación</label>
-        <input type="text" name="linea"linea id ="informacion-perfil" value="{{$lineainvestigacion->linea}}" placeholder="Nombre de la Línea de Investigación" class="form-control">
+        <input type="text" name="linea"linea id ="informacion-perfil" value="{{$lineainvestigacion->linea}}" placeholder="Nombre de la Línea de Investigación" class="form-control" required>
 
       </div>
 
       <div class="formulario"> 
         
         <label for="">CLave LI TECNM</label>
-        <input type="text" name="clave" id ="informacion-perfil" value="{{$lineainvestigacion->clave}}" placeholder="Clave Línea de Investigación TECNM" class="form-control">
+        <input type="text" name="clave" id ="informacion-perfil" value="{{$lineainvestigacion->clave}}" placeholder="Clave Línea de Investigación TECNM" class="form-control" required>
 
       </div>
 

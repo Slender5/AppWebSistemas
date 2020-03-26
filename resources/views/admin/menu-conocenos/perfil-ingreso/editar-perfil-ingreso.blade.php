@@ -50,8 +50,8 @@
 							<tr>
 								<td>{{$perfilingres->vineta}}</td>
 								<td>{{$perfilingres->elemento}}</td>
-								<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="eliminar-elemento/{{$perfilingres->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
-								<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/NuevoElemento/{{$perfilingres->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
+								<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Perfil-Ingreso-Eliminar/{{$perfilingres->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
+								<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/PerfilIngreso/{{$perfilingres->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
 							</tr>
 
 							@endforeach

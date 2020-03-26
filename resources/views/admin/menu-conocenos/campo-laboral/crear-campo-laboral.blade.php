@@ -20,21 +20,14 @@
       <div class="formulario"> 
 
             <label for="">Viñetas</label>
-            <input type="text" name="vineta" id ="informacion-perfil" value="" placeholder="1-@-*-3-." class="form-control">
+            <input type="text" name="vineta" id ="informacion-perfil" value="" placeholder="1-@-*-3-." class="form-control" required>
 
       </div>
 
       <div class="formulario"> 
 
             <label for="">Información</label>
-            <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Información" class="form-control">
-
-      </div>
-
-      <div class="formulario"> 
-
-            <label for="">Identificador único</label>
-            <input type="text" name="slug" id ="informacion-perfil" value="" placeholder="Dato aleatorio" class="form-control">
+            <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Información" class="form-control" required>
 
       </div>
 

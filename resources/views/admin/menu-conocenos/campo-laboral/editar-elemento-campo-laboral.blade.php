@@ -20,12 +20,12 @@
 
       <div class="formulario"> 
             <label for="">Viñetas</label>
-            <input type="text" name="vineta" id ="informacion-perfil" value="{{$campolaboral->vineta}}" placeholder="1-@-*-3-." class="form-control">
+            <input type="text" name="vineta" id ="informacion-perfil" value="{{$campolaboral->vineta}}" placeholder="1-@-*-3-." class="form-control" required>
       </div>
 
       <div class="formulario"> 
             <label for="">Información</label>
-            <input type="text" name="elemento" id ="informacion-perfil" value="{{$campolaboral->elemento}}" placeholder="Información" class="form-control">
+            <input type="text" name="elemento" id ="informacion-perfil" value="{{$campolaboral->elemento}}" placeholder="Información" class="form-control" required>
       </div>
 
       <div class="contenedor-botones">

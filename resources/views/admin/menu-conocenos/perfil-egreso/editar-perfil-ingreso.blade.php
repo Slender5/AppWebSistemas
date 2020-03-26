@@ -50,8 +50,8 @@
 							<tr>
 								<td>{{$perfilegres->vineta}}</td>
 								<td>{{$perfilegres->elemento}}</td>
-								<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="eliminar-elemento-eg/{{$perfilegres->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
-								<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/NuevoElementoEg/{{$perfilegres->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
+								<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Perfil-Egreso-Eliminar/{{$perfilegres->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
+								<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/PerfilEgreso/{{$perfilegres->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
 							</tr>
 
 							@endforeach

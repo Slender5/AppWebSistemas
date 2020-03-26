@@ -12,28 +12,28 @@
 			<div class="formulario">
 				
 				<label for="">Titulo</label>
-				<input type="text" name="titulo" id="titulo-ret" value="{{$reticula->titulo}}" placeholder="Inserte Título Deseado" class="form-control">
+				<input type="text" name="titulo" id="titulo-ret" value="{{$reticula->titulo}}" placeholder="Inserte Título Deseado" class="form-control" required>
 
 			</div>
 
 			<div class="formulario">
 				
 				<label for="">Programa</label>
-				<input type="text" name="programa" id="programa-ret" value="{{$reticula->programa}}" placeholder="Inserte Nombre Programa Educativo" class="form-control">
+				<input type="text" name="programa" id="programa-ret" value="{{$reticula->programa}}" placeholder="Inserte Nombre Programa Educativo" class="form-control" required>
 
 			</div>
 
 			<div class="formulario">
 				
 				<label for="">Plan</label>
-				<input type="text" name="plan" id="plan-ret" value="{{$reticula->plan}}" placeholder="Inserte Plan Estudio" class="form-control">
+				<input type="text" name="plan" id="plan-ret" value="{{$reticula->plan}}" placeholder="Inserte Plan Estudio" class="form-control" required>
 
 			</div>
 
 			<div class="formulario">
 				
 				<label for="">Especialidad</label>
-				<input type="text" name="especialidad" id="especialidad-ret" value="{{$reticula->especialidad}}" placeholder="Inserte Especialidad" class="form-control">
+				<input type="text" name="especialidad" id="especialidad-ret" value="{{$reticula->especialidad}}" placeholder="Inserte Especialidad" class="form-control" required>
 
 			</div>
 
