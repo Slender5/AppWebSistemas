@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace WebSistemas\Http\Controllers;
 
+use WebSistemas\Noticia;
 use Illuminate\Http\Request;
+use WebSistemas\Http\Requests\StoreNoticiaRequest;
 
 class InicioController extends Controller
 {
@@ -14,7 +16,12 @@ class InicioController extends Controller
     public function index()
     {
         //
-        return view('admin/inicio');
+        $noticias = Noticia::latest()->take(4)->get();
+
+
+      //  echo $ultimo;
+    //notica1 = Noticia::->where('id', $)
+        return view('admin.inicio', compact('noticias'));
     }
 
     /**
@@ -24,7 +31,7 @@ class InicioController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.news.crear');
     }
 
     /**
@@ -35,7 +42,8 @@ class InicioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
     }
 
     /**
@@ -44,9 +52,12 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Noticia $noticia)
     {
-        //
+      // $noticia = Noticia::where('slug','=' ,$slug)->firstOrFail();
+      //$noticia = Noticia::find($id);
+
+      return view('admin.news.show', compact('noticia'));
     }
 
     /**
@@ -55,9 +66,10 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Noticia $noticia)
     {
-        //
+      return $noticia;
+      //  return View('admin.news.editar',compact('noticia'));
     }
 
     /**
@@ -78,8 +90,15 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy(Noticia $noticia){
+
+    $file_path =public_path().'/images/news/'.$noticia->newimage;
+       \File::delete($file_path);
+      //  $noticia->delete();
+        return $file_path;
+      //  return 'Eliminado';
+    //  return redirect()->route('admin.inicio');
+
         //
     }
 }
