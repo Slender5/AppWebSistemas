@@ -12,6 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-contenedores.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-noticias.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
+
 
 </head>
 
@@ -129,11 +131,7 @@
 
 			<!--------------------------------------------------------- SLIDER --------------------------------------------------------->
 
-			<div class="contenedor-slider">
-
 				@yield('content-slider')										
-										
-			</div>
  
 
 			<!--------------------------------------------------------- INFOR --------------------------------------------------------->
