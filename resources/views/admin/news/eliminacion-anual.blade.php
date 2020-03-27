@@ -53,8 +53,7 @@
 	<!------------------------------------------------------------- BOTON ELIMINAR MASIVO ---------------------------------------------------------->
 
 		<div class="contenedor-botones">
-
-			<a><button class="btn"><span>Eliminar</span></button></a>
+			<button class="btn"><span>Eliminar</span></button>
 
 		</div>
 

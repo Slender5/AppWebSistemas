@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 	/********************************************Slider**********************************************/
 
 $(document).ready(function(){
@@ -15,14 +14,3 @@ $(document).ready(function(){
 	});
 
 });
-=======
-	/********************************************Slider**********************************************/
-
-	  $(window).load(function() {
-    $('.flexslider').flexslider({
-    	touch: true,
-    	pauseOnAction: false,
-    	pauseOnHover: false,
-    });
-  });
->>>>>>> 4022e356adf2d748e7d8cd7c91111d927a9ad44d
