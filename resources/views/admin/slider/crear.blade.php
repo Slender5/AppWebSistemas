@@ -14,7 +14,7 @@
 
   			<label for="">Titulo</label>
 
-  			<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control">
+  			<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control">
 
   		</div>
 
@@ -32,7 +32,7 @@
   						<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
   					</label>
 
-  					<input id="file-upload" name="image" value="/images/slider/" onchange='cambiar()' type="file" style='display: none;'/>
+  					<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" style='display: none;'/>
 
   					<div id="info-img">No se Eligió Archivo</div>
 
@@ -69,13 +69,13 @@
 
   			</div>
 
-        @foreach ($sliders as $slider)
+        @foreach ($slidersG as $sliderG)
 
 
   			<div class="contenedor-seccion-preliminar">
 
-  				<img src="/images/slider/{{$slider->image}}">
-  				<h2>{{$slider->contenido}}</h2>
+  				<img src="/images/slider/{{$sliderG->image}}">
+  				<h2>{{$sliderG->contenido}}</h2>
 
   			</div>
       @endforeach

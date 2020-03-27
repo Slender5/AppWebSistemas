@@ -25,9 +25,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-      $sliders = Slider::all();
-
-        return view('admin.slider.crear',compact('sliders'));
+        return view('admin.slider.crear');
     }
 
     /**
