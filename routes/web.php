@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 
 Route::get('/', function () {
     return view('layouts/administrador');
@@ -98,93 +94,7 @@ Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->n
 
 Auth::routes();
 
-//Route::get('admin', 'InicioController@index');
-Route::resource('admin','InicioController');
-
-
-
-//Route::resource('admin','InicioController')->parameters([
-//        'admin' => 'noticias'
-// ]);
-
-Route::resource('noticias-admin','NoticiaController')->parameters([
-      'noticias-admin' => 'noticia'
-  ]);
-
-
-Route::resource('slider','SliderController')->parameters([
-        'slider' => 'slider'
-    ]);
+Route::get('admin', 'InicioController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-////////////////////////Buscador de noticias///////////////////////////
-
-Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion');
-
-Route::get('buscador-noticias', 'NoticiaController@buscador');
-
-
-////////////////////Eliminacion Anual/////////////////////////////
-Route::get('/eliminacion-anual', 'NoticiaController@eliminaranual');
-
-
-
-////////////////////////////Rutas para los links del menú//////////////////////////////////////
-
-
-//Rutas-informacion-carrera
-Route::get('/informacion-carrera', function(){
-	return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
-})->name('informacion-carrera');
-
-Route::get('/informacion-carrera/editar-infomacion-carrera', function(){
-	return view('admin/menu-conocenos/informacion-carrera/editar-informacion-carrera');
-})->name('editar-informacion-carrera');
-
-//Rutas-perfil-egreso
-Route::get('perfil de egreso', 'PerfilEgresoController@index')->name('perfil-egreso');
-
-Route::get('Editar perfil de egreso', 'PerfilEgresoController@list')->name('editar-perfil-egreso');
-
-Route::get('Editar perfil egreso', 'PerfilEgresoController@create')->name('crear-perfil-egreso');
-
-Route::get('Editar elemento eg', 'PerfilEgresoController@edit')->name('editar-elemento-eg');
-
-Route::resource('NuevoElementoEg', 'PerfilEgresoController');
-
-Route::get('eliminar-elemento-eg/{slug}', 'PerfilEgresoController@destroy')->name('eliminar-elemento-eg');
-
-//Rutas-perfil-ingreso
-Route::get('perfil de ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso');
-
-Route::get('Editar perfil de ingreso', 'PerfilIngresoController@list')->name('editar-perfil-ingreso');
-
-Route::get('Editar perfil ingreso', 'PerfilIngresoController@create')->name('crear-perfil-ingreso');
-
-Route::get('Editar elemento', 'PerfilIngresoController@edit')->name('editar-elemento');
-
-Route::resource('NuevoElemento', 'PerfilIngresoController');
-
-Route::get('eliminar-elemento/{slug}', 'PerfilIngresoController@destroy')->name('eliminar-elemento');
-
-//Rutas-reticula
-Route::get('reticula', 'ReticulaController@index')->name('reticula');
-
-Route::get('Crear Reticula', 'ReticulaController@create')->name('crear-reticula');
-
-Route::get('Editar reticula', 'ReticulaController@edit')->name('editar-reticula');
-
-Route::resource('VerReticula', 'ReticulaController');
-
-Route::get('eliminar-reticula/{slug}', 'ReticulaController@destroy')->name('eliminar-reticula');
-
-Route::get('/reticula/descargar/{slug}', 'ReticulaController@download')->name('descargar');
-
-//Rutas Mision, Vision y objetivos
-
-Route::resource('informacion', 'InformacionCarreraController');
-
-
-
-///////////////////////Fin de los links del menú//////////////////////////////

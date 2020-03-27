@@ -1,11 +1,13 @@
 <?php
 
-namespace WebSistemas\Http\Controllers;
+namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use WebSistemas\Noticia;
 use WebSistemas\Slider;
+=======
+>>>>>>> parent of 82d1e56... Subida index
 use Illuminate\Http\Request;
-use WebSistemas\Http\Requests\StoreNoticiaRequest;
 
 class InicioController extends Controller
 {
@@ -17,6 +19,7 @@ class InicioController extends Controller
     public function index()
     {
         //
+<<<<<<< HEAD
         $sliders = Slider::all();
         $noticias = Noticia::latest()->take(4)->get();
 
@@ -24,6 +27,9 @@ class InicioController extends Controller
       //  echo $ultimo;
     //notica1 = Noticia::->where('id', $)
         return view('admin.inicio', compact('noticias','sliders'));
+=======
+        return view('admin/inicio');
+>>>>>>> parent of 82d1e56... Subida index
     }
 
     /**
@@ -33,7 +39,7 @@ class InicioController extends Controller
      */
     public function create()
     {
-        return view ('admin.news.crear');
+        //
     }
 
     /**
@@ -44,8 +50,7 @@ class InicioController extends Controller
      */
     public function store(Request $request)
     {
-
-
+        //
     }
 
     /**
@@ -54,12 +59,9 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Noticia $noticia)
+    public function show($id)
     {
-      // $noticia = Noticia::where('slug','=' ,$slug)->firstOrFail();
-      //$noticia = Noticia::find($id);
-
-      return view('admin.news.show', compact('noticia'));
+        //
     }
 
     /**
@@ -68,10 +70,9 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noticia $noticia)
+    public function edit($id)
     {
-      return $noticia;
-      //  return View('admin.news.editar',compact('noticia'));
+        //
     }
 
     /**
@@ -92,15 +93,8 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticia $noticia){
-
-    $file_path =public_path().'/images/news/'.$noticia->newimage;
-       \File::delete($file_path);
-      //  $noticia->delete();
-        return $file_path;
-      //  return 'Eliminado';
-    //  return redirect()->route('admin.inicio');
-
+    public function destroy($id)
+    {
         //
     }
 }
